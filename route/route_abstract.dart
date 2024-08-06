@@ -7,13 +7,13 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 
-import '../../routes.dart';
 import '../../utils/index.dart';
 import 'flutter_route.dart';
 
 abstract class IRouterAbstract {
   late List<FlutterRoute> routes;
   late List<NavigatorObserver>? observers = [];
+  String? initialLocation;
 
   /// 根据自定义路由FlutterRoute
   /// 组装成GoRoute
@@ -30,7 +30,7 @@ abstract class IRouterAbstract {
     }
 
     final router = GoRouter(
-      initialLocation: Routes.home.path,
+      initialLocation: initialLocation,
       routes: routes,
       navigatorKey: NavigatorUtils.navigatorKey,
       observers: observers,

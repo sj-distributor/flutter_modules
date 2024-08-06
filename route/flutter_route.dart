@@ -58,7 +58,7 @@ class FlutterRoute {
   /// name：路由名称\
   /// path：路由路径\
   /// builder：页面\
-  /// title：页面标题 960\
+  /// title：页面标题\
   /// width：窗口宽度 640\
   /// height：窗口高度 640\
   /// minimize：是否允许最小化 true\
